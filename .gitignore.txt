@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+
+# Build outputs
+/build/
+dist/
+output/
+*.hex
+
+# Logs and artifacts
+*.log
+*.csv
+artifacts/
+
+# Binary docs
+*.docx
+*.xlsx
+
+# Environment
+.env
