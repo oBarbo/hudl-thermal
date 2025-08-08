@@ -1,5 +1,5 @@
 Requirement ID	Requirement Description	Test Case(s)	Test Type	Status
-RQ-001	Maintain target temperature within +/-1°C	"TST-001, TST-002"	Integration/System	Covered
+RQ-001	Maintain target temperature within +/-1Â°C	"TST-001, TST-002"	Integration/System	Covered
 RQ-002	PWM output matches temperature input logic	"TST-003, TST-004"	Unit/Integration	Covered
 RQ-003	Fan RPM within +/-5% of expected at given PWM	"TST-005, TST-006"	System/Validation	Covered
 RQ-004	Detect sensor disconnection/failure	TST-007	Edge Case	Covered
