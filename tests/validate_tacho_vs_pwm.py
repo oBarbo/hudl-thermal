@@ -1,12 +1,3 @@
-
-(leave empty if no dependencies — GitHub Actions will handle this)
-
----
-
-## 3.4 `tests/validate_tacho_vs_pwm.py`
-Copy this exact script (this is the small validation script):
-
-```python
 """
 Test Function: Validate Tacho Signal vs PWM Setting (simulation)
 
