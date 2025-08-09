@@ -54,7 +54,7 @@ jobs:
           echo "Test script not found — running in simulation mode"
         fi
     
-        # Always ensure a CSV exists for artifact upload
+        # Always ensure a CSV exists
         if [ ! -f tacho_validation_log.csv ]; then
           echo "Creating dummy tacho_validation_log.csv..."
           echo "PWM,ExpectedRPM,ActualRPM,Pass" > tacho_validation_log.csv
@@ -63,13 +63,16 @@ jobs:
           echo "60,3000,2980,True" >> tacho_validation_log.csv
         fi
     
-        echo "CSV contents:"
-        cat tacho_validation_log.csv
-
+        # Create artifacts folder and move the CSV inside
+        mkdir -p artifacts
+        mv tacho_validation_log.csv artifacts/
+    
+        echo "Final artifacts folder contents:"
+        ls -la artifacts
 
     - name: Archive logs
       if: always()
       uses: actions/upload-artifact@v4
       with:
         name: tacho-validation-logs
-        path: tacho_validation_log.csv
+        path: artifacts/tacho_validation_log.csv
